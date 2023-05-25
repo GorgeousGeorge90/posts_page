@@ -9,7 +9,7 @@ const router = createBrowserRouter(
     createRoutesFromElements(
         <Route path='/' element={<RoutLayout/>}>
             <Route index element={<PostsPage/>}/>
-            <Route path='my_page' element={<MyPage/>}/>
+            <Route path='about' element={<MyPage/>}/>
             <Route path='user_page' element={<UserPage/>}/>
         </Route>
     )

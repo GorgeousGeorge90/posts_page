@@ -1,0 +1,56 @@
+@use 'src/assets/styles/base';
+@import 'src/assets/styles/extends';
+
+
+.container {
+  @extend %base-flex;
+  width: map-get(base.$app_width, app);
+  height: map-get(base.$app_height, header);
+  background-color: var(--header-bg);
+  color: #FFF;
+  margin: 0 auto;
+  border-radius: 20px;
+
+  header {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 100px 1fr 2fr;
+    width: map-get(base.$app_width, container);
+    gap:20px;
+    font-family: 'Playfair Display', serif;
+
+    nav,.title {
+      @extend %base-flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    nav {
+      align-items: end;
+      cursor: pointer;
+
+      :nth-child(2) {
+        scale: 0.9;
+      }
+    }
+
+    .title {
+      gap: 5px;
+
+      h4, p {
+        margin: 0;
+      }
+
+      h4 {
+        letter-spacing: 2px;
+        font-weight: lighter;
+      }
+
+      h4::first-letter {
+        color: var(--first-letter);
+        font-size: 1.2em;
+        font-weight: 600;
+      }
+    }
+  }
+};
