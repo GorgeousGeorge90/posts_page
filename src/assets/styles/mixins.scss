@@ -1,0 +1,14 @@
+@import 'extends';
+
+
+@mixin base-container($top:0, $bottom:0) {
+  @extend %base-container-prop;
+
+  @if ($top != 0) {
+    border-radius: $top $top 0 0;
+  }
+
+  @if ($bottom != 0) {
+    border-radius: 0 0 $bottom $bottom ;
+  }
+}

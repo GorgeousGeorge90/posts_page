@@ -1,15 +1,14 @@
 @use 'src/assets/styles/base';
 @import 'src/assets/styles/extends';
+@import 'src/assets/styles/mixins';
 
 
 .container {
-  @extend %base-flex;
+  @include base-container(20px);
   width: map-get(base.$app_width, app);
   height: map-get(base.$app_height, header);
   background-color: var(--header-bg);
   color: #FFF;
-  margin: 0 auto;
-  border-radius: 20px;
 
   header {
     display: grid;

@@ -6,3 +6,10 @@
     align-items: center;
     justify-content: center;
 }
+
+%base-container-prop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
