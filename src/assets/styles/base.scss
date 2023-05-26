@@ -8,5 +8,6 @@ $app_width: (
 
 $app_height: (
         app: 100vh,
+        main: calc(100vh - 120px),
         header: 120px,
 );
