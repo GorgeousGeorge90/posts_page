@@ -7,7 +7,7 @@ import {rootWatcher} from "./index";
 
 
 const rootReducer = combineReducers({
-    // postsPage:postsReducer,
+    postsPage:postsReducer,
     aboutPage:aboutReducer,
 })
 

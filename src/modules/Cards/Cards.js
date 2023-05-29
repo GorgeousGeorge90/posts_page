@@ -16,9 +16,9 @@ const Cards = () => {
     return (<div className={styles.container}>
         <ul>
             {
-                works.map(work => <CardItem key={work.id}
+                works.map(work =><li><CardItem key={work.id}
                                                 {...work}
-                />)
+                /></li>)
             }
         </ul>
         </div>)

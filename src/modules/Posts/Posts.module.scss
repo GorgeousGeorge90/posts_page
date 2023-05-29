@@ -1,0 +1,11 @@
+@import "src/assets/styles/extends";
+
+
+.container {
+  @extend %base-flex;
+
+  ul {
+    overflow: scroll;
+  }
+
+}

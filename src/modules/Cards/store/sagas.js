@@ -2,9 +2,7 @@ import {put,call,takeEvery} from 'redux-saga/effects';
 import {asyncAboutTypes} from './types';
 import {aboutActions} from './actions';
 import aboutApi from "../api/api";
-
-
-const delay = ms => new Promise(resolve => setTimeout(()=> resolve(),ms))
+import {delay} from "../../../utils/utils";
 
 function* getWorksWorker() {
     yield put(aboutActions.isLoading(true))

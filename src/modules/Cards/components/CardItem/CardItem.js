@@ -2,8 +2,11 @@ import {Card} from 'react-bootstrap';
 
 const CardItem = ({description,title,link,pic}) => {
 
+
     return (<Card style={{width: '18rem'}}>
-        <Card.Img variant="top" src={pic}/>
+        <Card.Img variant="top"
+                  src={pic}
+        />
         <Card.Body>
             <Card.Title>{title}</Card.Title>
             <Card.Text>

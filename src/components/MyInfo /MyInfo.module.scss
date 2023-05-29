@@ -1,0 +1,26 @@
+@import "src/assets/styles/extends";
+
+
+.container {
+  @extend %base-flex;
+  flex-direction: column;
+
+  p {
+    margin: 0;
+  }
+
+  .avatar {
+
+    img {
+      height: 100px;
+      border-radius: 50px;
+    }
+
+
+
+  }
+
+  .info {
+
+  }
+}

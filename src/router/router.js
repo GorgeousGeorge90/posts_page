@@ -1,7 +1,7 @@
 import {createBrowserRouter, createRoutesFromElements, Route} from "react-router-dom";
-import PostsPage from "../pages/PostsPage/MyPage";
 import UserPage from "../pages/UserPage/UserPage";
 import RoutLayout from "./RoutLayout";
+import PostsPage from "../pages/PostsPage/PostsPage";
 import AboutPage from "../pages/AboutPage/AboutPage";
 
 
