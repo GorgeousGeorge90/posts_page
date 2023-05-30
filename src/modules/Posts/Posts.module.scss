@@ -1,11 +1,15 @@
+@use 'src/assets/styles/base';
 @import "src/assets/styles/extends";
 
 
 .container {
-  @extend %base-flex;
+  width: map-get(base.$app_width, container);
+  height: map-get(base.$app_height, block);
 
   ul {
-    overflow: scroll;
+    display: flex;
+    flex-flow: column wrap;
+    gap:20px;
+    padding: 0;
   }
-
 }

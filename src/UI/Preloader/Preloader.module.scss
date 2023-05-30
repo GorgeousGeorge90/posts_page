@@ -1,0 +1,6 @@
+@import 'src/assets/styles/extends';
+
+.loader {
+  @extend %base-flex;
+  margin-top: 50px;
+}

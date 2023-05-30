@@ -1,6 +1,5 @@
 import styles from './PostItem.module.scss';
 import gamer from './../../assets/img/gamer.png';
-import {Button} from "react-bootstrap";
 import {useDispatch} from "react-redux";
 import {asyncPostsActions} from "../../store/actions";
 

@@ -3,7 +3,8 @@ import {postsTypes, asyncPostsTypes} from './types';
 
 export const postsActions = {
     getPosts: payload => ({type: postsTypes.GET_POSTS, payload}),
-    getUser: (id,comments) => ({type: postsTypes.GET_USER, payload:{id, comments}}),
+    getCurrentPost: (id,comments) => ({type: postsTypes.GET_CURRENT_POST, payload:{id, comments}}),
+    getClearPost: () => ({type: postsTypes.CLEAR_POST}),
     getIsFetching: payload => ({type: postsTypes.IS_FETCHING, payload}),
 }
 

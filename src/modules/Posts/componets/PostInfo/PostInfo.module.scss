@@ -1,0 +1,85 @@
+@use 'src/assets/styles/base';
+@import 'src/assets/styles/extends';
+@import 'src/assets/styles/mixins';
+
+
+.container {
+  @extend %base-container-prop;
+  flex-direction: column;
+  width: map-get(base.$app_width, app);
+  height: map-get(base.$app_height, container);
+  background-color: var(--main-bg);
+
+  p {
+    margin: 0;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: map-get(base.$app_width, container);
+    height: map-get(base.$app_height, block);
+
+    .info_content {
+      display: grid;
+      grid-template: repeat(3, 40px) / 100px 1fr 300px;
+      grid-template-areas: 'logo title title'
+                            'logo text text '
+                            'logo btn btn ';
+      gap: 8px;
+
+      img {
+        transform: scale(1.4);
+        border: 4px solid;
+        border-radius: 50%;
+        border-color: var(--header-bg);
+      }
+
+      p:first-letter {
+        text-transform: uppercase;
+      }
+
+      :nth-child(1) {
+        @include grid-area(logo);
+      }
+
+      :nth-child(2) {
+        @include grid-area(title, center, start);
+
+      }
+
+      :nth-child(3) {
+        @include grid-area(text);
+      }
+
+      :nth-child(4) {
+        @include grid-area(btn, center, end);
+      }
+    }
+
+
+      .comments {
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+
+          li {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            p:first-letter {
+              text-transform: uppercase;
+            }
+
+            img {
+              height: 70px;
+            }
+          }
+        }
+      }
+    }
+  }

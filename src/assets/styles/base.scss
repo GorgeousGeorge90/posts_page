@@ -3,11 +3,12 @@
 
 $app_width: (
         app: 1200px,
-        container: 900px,
+        container: 1000px,
 );
 
 $app_height: (
         app: 100vh,
-        main: calc(100vh - 120px),
+        container: calc(100vh - 120px),
+        block: calc(100vh - 180px),
         header: 120px,
 );

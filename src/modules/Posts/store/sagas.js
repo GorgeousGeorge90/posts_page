@@ -17,7 +17,7 @@ function* commentsWorker(action) {
     yield put(postsActions.getIsFetching(true))
     yield delay(2000)
     const comments = yield call(postsApi.getComments, action.payload)
-    yield put(postsActions.getUser(action.payload, comments))
+    yield put(postsActions.getCurrentPost(action.payload, comments))
     yield put(postsActions.getIsFetching(false))
 }
 

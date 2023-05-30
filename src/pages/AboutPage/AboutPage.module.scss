@@ -1,15 +1,37 @@
-@use '../../assets/styles/base';
-@import '../../assets/styles/mixins';
-@import '../../assets/styles/extends';
+@use 'src/assets/styles/base';
+@import 'src/assets/styles/mixins';
+@import 'src/assets/styles/extends';
 
 
 .container {
-  display: flex;
-  justify-content: center;
-  margin: 0 auto;
-  gap: 50px;
+  @extend %base-container-prop;
+  gap: 20px;
   width: map-get(base.$app_width, app);
-  height: map-get(base.$app_height, main);
+  height: map-get(base.$app_height, container);
   background-color: var(--main-bg);
 
+  .main_content {
+    display: flex;
+    flex-flow: column wrap;
+    width: map-get(base.$app_width, container);
+    height: map-get(base.$app_height, block);
+
+    .btn {
+      align-self: end;
+    }
+
+    :nth-child(3) {
+      animation: show-it 1s ease-in-out;
+    }
+  }
+}
+
+@keyframes show-it {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }

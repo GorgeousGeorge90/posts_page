@@ -18,15 +18,15 @@ const AboutPage = () => {
     return (<div className={styles.container}>
         <div className={styles.main_content}>
             <AboutContent/>
-            <div>
+            <div className={styles.btn}>
                 <Button variant='primary'
                         onClick={()=>setOpen(!open)}>
                         GetWorks
                 </Button>
+            </div>
                 {
                     open ? <Cards/>: null
                 }
-            </div>
         </div>
     </div>)
 }

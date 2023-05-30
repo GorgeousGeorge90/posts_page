@@ -12,3 +12,9 @@
     border-radius: 0 0 $bottom $bottom ;
   }
 }
+
+@mixin grid-area($area,$align:center,$justify:center) {
+  grid-area: $area;
+  align-self: $align;
+  justify-self: $justify;
+}

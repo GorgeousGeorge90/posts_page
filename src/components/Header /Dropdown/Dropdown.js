@@ -4,8 +4,7 @@ import MyInfo from "../../MyInfo /MyInfo";
 
 const DropdownElement = () => {
 
-    return (
-        <DropdownButton id="dropdown-basic-button"
+    return (<DropdownButton id="dropdown-basic-button"
                         title="Menu"
                         variant={'primary'}
         >

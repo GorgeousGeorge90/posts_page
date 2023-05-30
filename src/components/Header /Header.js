@@ -20,7 +20,9 @@ const Header = () => {
             </div>
             <nav>
                 <Switcher/>
-                <DropdownElement/>
+                <div className={styles.drop}>
+                    <DropdownElement/>
+                </div>
             </nav>
         </header>
     </div>)

@@ -3,8 +3,8 @@ import {postsTypes} from './types';
 
 const initialState = {
     posts:[],
-    currentUser: {
-        user: null,
+    currentPost: {
+        post: null,
         comments: [],
     },
     isFetching: false,
@@ -20,13 +20,24 @@ const postsReducer = (state = initialState,action) => {
             }
         }
 
-        case postsTypes.GET_USER: {
+        case postsTypes.GET_CURRENT_POST: {
             return {
                 ...state,
-                currentUser: {
-                    ...state.currentUser,
-                    user: state.posts.filter(post=> post.userId === action.payload.id)[0],
+                currentPost: {
+                    ...state.currentPost,
+                    post: state.posts.filter(post=> post.userId === action.payload.id)[0],
                     comments: action.payload.comments,
+                }
+            }
+        }
+
+        case postsTypes.CLEAR_POST: {
+            return {
+                ...state,
+                currentPost: {
+                    ...state.currentPost,
+                    post: null,
+                    comments: [],
                 }
             }
         }

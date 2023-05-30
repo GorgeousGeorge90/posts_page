@@ -2,7 +2,8 @@
 
 export const postsTypes = {
     GET_POSTS: 'GET POSTS',
-    GET_USER: 'GET_USER',
+    GET_CURRENT_POST: 'GET_CURRENT_POST',
+    CLEAR_POST: 'CLEAR_POST',
     IS_FETCHING: 'IS_FETCHING',
 }
 
