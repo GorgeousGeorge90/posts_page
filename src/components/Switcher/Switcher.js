@@ -10,12 +10,24 @@ const Switcher = () => {
         let app = document.querySelector('#app')
         app.setAttribute('theme', `theme-${theme}`)
     },[theme])
+    
+    const styles = {
+        paddingRight:'8px',
+        textTransform: 'uppercase',
+    }
 
     const onClick = () => {
         theme === 'light' ? setTheme('dark'): setTheme('light')
     }
-
-    const ThemeIcon = theme === 'light' ? <LightIcon fill='white'/>: <DarkIcon fill='white'/>
+    
+    const ThemeIcon = theme === 'light' ? <>
+        <span style={styles}>light</span>
+        <LightIcon fill='white'/>
+        </>:
+        <>
+            <span style={styles}>dark</span>
+            <DarkIcon fill='white'/>
+        </>
 
 
     return (<div onClick={onClick}>
