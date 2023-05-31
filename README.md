@@ -24,4 +24,4 @@ Simple SPA with two pages:
 ### Contacts
 
 For feedback:`Gambit47@yandex.ru`<br>
-Deployed:`https://posts-page-git-master-gorgeousgeorge90.vercel.app/`
+Deployed:`https://posts-page-1.vercel.app/`
