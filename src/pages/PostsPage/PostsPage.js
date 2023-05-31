@@ -25,8 +25,10 @@ const PostsPage = () => {
         return <PostInfo/>
     }
 
-    if (isFetching) {
-        return <Preloader/>
+     if (isFetching) {
+        return <div className={styles.container}>
+            <Preloader/>
+        </div>
     }
 
     return (<div className={styles.container}>
