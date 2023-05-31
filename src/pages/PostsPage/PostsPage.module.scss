@@ -9,4 +9,13 @@
   height: map-get(base.$app_height, container);
   background-color: var(--main-bg);
 
+  .content {
+    display: flex;
+    justify-content: start;
+    flex-flow: column wrap;
+    gap: 30px;
+    height: map-get(base.$app_height, block);
+
+  }
+
 }

@@ -4,7 +4,6 @@
 
 .container {
   width: map-get(base.$app_width, container);
-  height: map-get(base.$app_height, block);
 
   ul {
     display: flex;

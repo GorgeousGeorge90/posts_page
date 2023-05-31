@@ -4,13 +4,15 @@ import {getPosts} from "./selectors/selectors";
 import PostItem from "./componets/PostItem/PostItem";
 
 
-const Posts = () => {
+const Posts = ({currentPage, pagePortion}) => {
     const posts = useSelector(state=> getPosts(state))
+    let lastIndex = currentPage * pagePortion
+    let firstIndex = lastIndex - pagePortion
 
     return (<div className={styles.container}>
         <ul>
             {
-                posts.map(post => <PostItem key={post.id}
+                posts.slice(firstIndex,lastIndex).map(post => <PostItem key={post.id}
                                                 {...post}
                 />)
             }

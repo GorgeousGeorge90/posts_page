@@ -4,8 +4,9 @@ import {useDispatch, useSelector} from "react-redux";
 import {getCurrentPost, getIsFetching, getPosts} from "../../modules/Posts/selectors/selectors";
 import {asyncPostsActions} from "../../modules/Posts/store/actions";
 import PostInfo from "../../modules/Posts/componets/PostInfo/PostInfo";
-import {useLayoutEffect} from "react";
+import {useLayoutEffect, useState} from "react";
 import Preloader from "../../UI/Preloader/Preloader";
+import Pagination from "../../components/Paginator/Pagination";
 
 
 
@@ -18,6 +19,8 @@ const PostsPage = () => {
         dispatch(asyncPostsActions.asyncGetPosts())
     },[])
 
+    const [currentPage, setCurrentPage] = useState(1)
+
     if (currentPost !== null) {
         return <PostInfo/>
     }
@@ -28,7 +31,16 @@ const PostsPage = () => {
 
     return (<div className={styles.container}>
         {
-            posts ?  <Posts/>: null
+            posts ? <div className={styles.content}>
+                <Pagination totalPages={posts.length}
+                            pagePortion={5}
+                            currentPage={currentPage}
+                            setCurrent={setCurrentPage}
+                />
+                <Posts pagePortion={5}
+                       currentPage={currentPage}
+                />
+            </div> : null
         }
     </div>)
 }
