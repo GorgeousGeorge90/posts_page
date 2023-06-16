@@ -4,7 +4,7 @@ import {useDispatch} from "react-redux";
 import {asyncPostsActions} from "../../store/actions";
 
 
-const PostItem = ({userId, id, title, body}) => {
+const PostItem = ({userId, title, body}) => {
     const dispatch = useDispatch()
     const onClick = () => {
         dispatch(asyncPostsActions.asyncGetComments(userId))

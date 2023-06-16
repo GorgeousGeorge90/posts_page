@@ -11,8 +11,8 @@ import Posts from "../../Posts";
 
 const PostInfo = () => {
     const dispatch = useDispatch()
-    const comments = useSelector(state => getComments(state))
-    const {title, body} = useSelector(state=> getCurrentPost(state))
+    const comments = useSelector(getComments)
+    const {title, body} = useSelector(getCurrentPost)
     const [show,setShow] = useState(false)
 
     const onClick = () => {

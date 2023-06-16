@@ -4,7 +4,6 @@ import avatar from './../../assets/img/avatar.jpg';
 
 const MyInfo = () => {
 
-
     return (<div className={styles.container}>
         <div className={styles.avatar}>
             <img src={avatar} alt='ava'/>

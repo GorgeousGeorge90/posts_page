@@ -5,7 +5,7 @@ import PostItem from "./componets/PostItem/PostItem";
 
 
 const Posts = ({currentPage, pagePortion}) => {
-    const posts = useSelector(state=> getPosts(state))
+    const posts = useSelector(getPosts)
     let lastIndex = currentPage * pagePortion
     let firstIndex = lastIndex - pagePortion
 

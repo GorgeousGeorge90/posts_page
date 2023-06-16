@@ -4,7 +4,7 @@ import {aboutActions} from './actions';
 import aboutApi from "../api/api";
 import {delay} from "../../../utils/utils";
 
-function* getWorksWorker() {
+export function* getWorksWorker() {
     yield put(aboutActions.isLoading(true))
     yield delay(2000)
     const works = yield call(aboutApi.getWorks)

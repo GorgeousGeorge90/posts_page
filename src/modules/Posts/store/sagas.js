@@ -5,7 +5,7 @@ import postsApi from "../api/api";
 import {asyncPostsTypes} from "./types";
 
 
-function* postsWorker() {
+export function* postsWorker() {
     yield put(postsActions.getIsFetching(true))
     yield delay(2000)
     const posts = yield call(postsApi.getPosts)
@@ -13,7 +13,7 @@ function* postsWorker() {
     yield put(postsActions.getIsFetching(false))
 }
 
-function* commentsWorker(action) {
+export function* commentsWorker(action) {
     yield put(postsActions.getIsFetching(true))
     yield delay(2000)
     const comments = yield call(postsApi.getComments, action.payload)

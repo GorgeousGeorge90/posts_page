@@ -2,7 +2,7 @@ import {postsTypes} from './types';
 
 
 const initialState = {
-    posts:[],
+    items:[],
     currentPost: {
         post: null,
         comments: [],
@@ -16,7 +16,7 @@ const postsReducer = (state = initialState,action) => {
         case postsTypes.GET_POSTS: {
             return {
                 ...state,
-                posts: action.payload,
+                items: action.payload,
             }
         }
 
@@ -25,7 +25,7 @@ const postsReducer = (state = initialState,action) => {
                 ...state,
                 currentPost: {
                     ...state.currentPost,
-                    post: state.posts.filter(post=> post.userId === action.payload.id)[0],
+                    post: state.items.filter(post=> post.userId === action.payload.id)[0],
                     comments: action.payload.comments,
                 }
             }

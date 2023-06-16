@@ -7,8 +7,8 @@ import {rootWatcher} from "./index";
 
 
 const rootReducer = combineReducers({
-    postsPage:postsReducer,
-    aboutPage:aboutReducer,
+    posts:postsReducer,
+    about:aboutReducer,
 })
 
 const saga = createSagaMiddleware()

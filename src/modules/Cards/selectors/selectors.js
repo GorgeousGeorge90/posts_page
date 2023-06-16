@@ -1,4 +1,2 @@
-
-
-export const getWorks = state => state.aboutPage.works
-export const getIsloading = state => state.aboutPage.isLoading
+export const getWorks = state => state.about.works
+export const getIsLoading = state => state.about.isLoading

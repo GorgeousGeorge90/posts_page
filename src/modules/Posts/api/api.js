@@ -6,8 +6,7 @@ const instance = axios.create({
 
 const postsApi = {
     getPosts: async () => {
-        const response = await instance.get('posts')
-        console.log(response.data)
+        const response = await axios.get('https://jsonplaceholder.typicode.com/posts')
         return response.data
     },
     getComments: async (postId) => {
