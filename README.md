@@ -15,11 +15,11 @@ Simple SPA with two pages:
 
 ### Tech Stack
 
-* HTML;
-* CSS/SCSS;
-* React JS;
-* Redux + Redux-Sagas;
-* React-Bootstrap;
+* [x] HTML;
+* [x] CSS/SCSS;
+* [x] React JS;
+* [x] Redux + Redux-Sagas;
+* [x] React-Bootstrap;
 
 ### Contacts
 
